@@ -1,0 +1,33 @@
+*,
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+.card {
+    transition: all 0.4s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(110%);
+}
+
+.form-check-input:hover {
+    cursor: pointer;
+}
+
+option {
+    padding: 0px 6rem !important;
+}
+
+table,
+.th-first {
+    /* border: 1px solid black; */
+    border-radius: 10px 0px 0px;
+}
+
+table,
+.th-last {
+    /* border: 1px solid black; */
+    border-radius: 0px 10px 0px 0px;
+}

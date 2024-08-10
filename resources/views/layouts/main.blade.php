@@ -26,24 +26,33 @@
                 <img src="{{ asset('image/store.png') }}" alt="Bootstrap" height="48">
                 {{-- <h3 class="d-inline align-middle">Toko Dyala</h3> --}}
             </a>
-            <div class="d-flex gap-3 navbar-nav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <a class="nav-link {{ request()->is('barang-masuk') ? 'active' : '' }}"
-                    href="{{ route('barang-masuk') }}">Barang Masuk</a>
-                <a class="nav-link {{ request()->is('barang-keluar') ? 'active' : '' }}"
-                    href="{{ route('barang-keluar') }}">Barang Keluar</a>
-                <a class="nav-link {{ request()->is('report-stock') ? 'active' : '' }}"
-                    href="{{ route('report-stock') }}">Report Stock</a>
-            </div>
-            <div class="d-flex align-items-center">
-                <i class="bi bi-sun my-auto pt-1 me-5"></i>
-                <div class="form-check form-switch ms-3 px-0 pt-0">
-                    <input class="form-check-input fs-5" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                        onclick="myFunction()" />
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('barang-masuk') ? 'active' : '' }}"
+                            href="{{ route('barang-masuk') }}">Barang Masuk</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link {{ request()->is('barang-keluar') ? 'active' : '' }}"
+                            href="{{ route('barang-keluar') }}">Barang Keluar</a></li>
+                    <li class="nav-item"><a class="nav-link {{ request()->is('report-stock') ? 'active' : '' }}"
+                            href="{{ route('report-stock') }}">Report Stock</a></li>
+
+                </ul>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-sun my-auto pt-1 me-5"></i>
+                    <div class="form-check form-switch ms-3 px-0 pt-0">
+                        <input class="form-check-input fs-5" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                            onclick="myFunction()" />
+                    </div>
+                    <i class="bi bi-moon pt-1"></i>
                 </div>
-                <i class="bi bi-moon pt-1"></i>
             </div>
-
         </div>
     </nav>
     <div class="container">
